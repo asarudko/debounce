@@ -9,8 +9,8 @@ import Combine
 import Foundation
 
 @propertyWrapper
-class DebouncedObservedObject<Wrapped: ObservableObject>: ObservableObject {
-    var wrappedValue: Wrapped
+public class DebouncedObservedObject<Wrapped: ObservableObject>: ObservableObject {
+    public let wrappedValue: Wrapped
     private var subscription: AnyCancellable?
     
     public init(wrappedValue: Wrapped, delay: Double = 1) {

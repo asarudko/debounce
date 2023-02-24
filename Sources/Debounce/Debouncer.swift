@@ -12,7 +12,7 @@ public class Debouncer<T>: ObservableObject {
     
     // MARK: - Properties
     @Published public var input: T
-    @Published private(set) var output: T
+    @Published public private(set) var output: T
     private var debounce: AnyCancellable?
     
     public init(initialValue: T, delay: Double = 1) {
